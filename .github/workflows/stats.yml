@@ -1,0 +1,76 @@
+name: Profile Stat Cards
+on:
+  schedule:
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/stats.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the dedicated `metrics` branch so the generated cards are
+      # committed there, keeping main's history clean.
+      - name: Checkout metrics branch
+        uses: actions/checkout@v4
+        with:
+          ref: metrics
+
+      - name: Prepare output dir
+        run: mkdir -p cards
+
+      # Self-hosted replacement for the unreliable public github-readme-stats
+      # instance (chronic 503). Cards are rendered to SVG in-CI and committed;
+      # no runtime third-party dependency. Pinned to an immutable SHA.
+      - name: Stats card (dark)
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: stats
+          options: username=dz-vadim&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=0E63CD&icon_color=0E63CD&theme=tokyonight
+          path: cards/stats-dark.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Stats card (light)
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: stats
+          options: username=dz-vadim&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=0E63CD&icon_color=0E63CD&theme=default
+          path: cards/stats-light.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Top languages (dark)
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: top-langs
+          options: username=dz-vadim&layout=compact&langs_count=8&hide_border=true&title_color=0E63CD&theme=tokyonight
+          path: cards/top-langs-dark.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Top languages (light)
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: top-langs
+          options: username=dz-vadim&layout=compact&langs_count=8&hide_border=true&title_color=0E63CD&theme=default
+          path: cards/top-langs-light.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Commit cards to metrics branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cards/*.svg
+          if git diff --cached --quiet; then
+            echo "No card changes to commit."
+          else
+            git commit -m "Update stat cards - [Skip GitHub Action]"
+            git push
+          fi
