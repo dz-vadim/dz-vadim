@@ -23,23 +23,29 @@
 
 <br><br>
 
+<!-- Self-hosted stat cards, generated in CI by .github/workflows/stats.yml
+     (stats-organization/github-readme-stats-action) and committed to the
+     `metrics` branch. Replaces the unreliable public github-readme-stats. -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=dz-vadim&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=0E63CD&icon_color=0E63CD&theme=tokyonight" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=dz-vadim&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=0E63CD&icon_color=0E63CD&theme=default" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=dz-vadim&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=0E63CD&icon_color=0E63CD&theme=default" alt="GitHub stats" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/stats-light.svg" />
+  <img height="170" src="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/stats-light.svg" alt="GitHub stats" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=dz-vadim&layout=compact&langs_count=8&hide_border=true&title_color=0E63CD&theme=tokyonight" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=dz-vadim&layout=compact&langs_count=8&hide_border=true&title_color=0E63CD&theme=default" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dz-vadim&layout=compact&langs_count=8&hide_border=true&title_color=0E63CD&theme=default" alt="Top languages" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/top-langs-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/top-langs-light.svg" />
+  <img height="170" src="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/top-langs-light.svg" alt="Top languages" />
 </picture>
 
 <br>
 
+<!-- Self-hosted streak card, generated in CI by .github/workflows/stats.yml
+     (DenverCoder1/github-readme-streak-stats) and committed to the `metrics`
+     branch. Replaces the flaky public streak-stats.demolab.com instance. -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=dz-vadim&hide_border=true&theme=tokyonight&ring=0E63CD&fire=0E63CD&currStreakLabel=0E63CD" />
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=dz-vadim&hide_border=true&ring=0E63CD&fire=0E63CD&currStreakLabel=0E63CD" />
-  <img src="https://streak-stats.demolab.com?user=dz-vadim&hide_border=true&ring=0E63CD&fire=0E63CD&currStreakLabel=0E63CD" alt="GitHub streak" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/streak-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/streak-light.svg" />
+  <img src="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/streak-light.svg" alt="GitHub streak" />
 </picture>
 
 </div>

@@ -63,6 +63,22 @@ jobs:
           path: cards/top-langs-light.svg
           token: ${{ secrets.METRICS_TOKEN }}
 
+      # Self-hosted replacement for the flaky public streak-stats instance,
+      # via DenverCoder1's official GitHub Action (7k+ stars, maintained).
+      - name: Streak card (dark)
+        uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077 # v1.7.0
+        with:
+          options: user=dz-vadim&hide_border=true&theme=tokyonight&ring=0E63CD&fire=0E63CD&currStreakLabel=0E63CD
+          path: cards/streak-dark.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Streak card (light)
+        uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077 # v1.7.0
+        with:
+          options: user=dz-vadim&hide_border=true&ring=0E63CD&fire=0E63CD&currStreakLabel=0E63CD
+          path: cards/streak-light.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
       - name: Commit cards to metrics branch
         run: |
           git config user.name "github-actions[bot]"
