@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">VADYM DZIUBA&#39;s GitHub Stats, Rank: B</title>
-        <desc id="descId">Total Stars Earned: 8, Total Commits  : 1268, Total PRs: 140, Total Issues: 18, Contributed to (last year): 8</desc>
+        <desc id="descId">Total Stars Earned: 8, Total Commits  : 1300, Total PRs: 163, Total Issues: 18, Contributed to (last year): 9</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,11 +73,12 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 136.63230446867237;
+        stroke-dashoffset: 133.7876647644464;
       }
     }
   
   
+          
 
           
       /* Animations */
@@ -102,9 +103,15 @@
         </style>
 
         
+        <defs>
+          
+          
+        </defs>
+        
 
         <rect
           data-testid="card-bg"
+          class="card-bg"
           x="0.5"
           y="0.5"
           rx="4.5"
@@ -192,7 +199,7 @@
         x="224.01"
         y="12.5"
         data-testid="prs"
-      >140</text>
+      >163</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
@@ -222,7 +229,7 @@
         x="224.01"
         y="12.5"
         data-testid="contribs"
-      >8</text>
+      >9</text>
     </g>
   </g>
     </svg>
