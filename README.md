@@ -58,10 +58,13 @@
 
 <br><br>
 
+<!-- Self-hosted activity graph, generated in CI by .github/workflows/stats.yml
+     (Ashutosh00710/github-readme-activity-graph) and committed to the `metrics`
+     branch. Replaces the public vercel instance (disabled, HTTP 402). -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=dz-vadim&theme=tokyo-night&hide_border=true&bg_color=transparent&color=0E63CD&line=0E63CD&point=0E63CD" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=dz-vadim&theme=github-light&hide_border=true&bg_color=transparent&color=0E63CD&line=0E63CD" />
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=dz-vadim&theme=github-light&hide_border=true&bg_color=transparent&color=0E63CD&line=0E63CD" alt="Contribution activity graph" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/activity-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/activity-light.svg" />
+  <img width="95%" src="https://raw.githubusercontent.com/dz-vadim/dz-vadim/metrics/cards/activity-light.svg" alt="Contribution activity graph" />
 </picture>
 
 </div>
